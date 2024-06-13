@@ -1,0 +1,146 @@
+<html>
+		<head>
+			<title> Horarios CEEP </title>
+		</head>
+<body>
+		<table border="1">
+			<tr>
+				<td> Horários</td>
+				<th> Segunda-Feira</th>
+				<th> Terça-Feira</th>
+				<th> Quarta-Feira</th>
+				<th> Quinta-Feira</th>
+				<th> Sexta-Feira</th>
+			</tr>
+			<tr>
+				<td> 7:30</td>
+				<td> Oficina Formativa </td>
+				<td> Física</td>
+				<td> Práticas Experimentais</td>
+				<td> Lingua Portuguesa</td>
+				<td> Geografia </td>
+			</tr>
+			<tr>
+				<td> 8:20</td>
+				<td> Oficina Formativa</td>
+				<td> Artes</td>
+				<td> Práticas Experimentais</td>
+				<td> Lingua Portuguesa</td>
+				<td> Trilhas de Aprofundamento UC 2</td>
+			</tr>
+			<tr>
+				<td> 9:30</td>
+				<td> História</td>
+				<td> Matemática</td>
+				<td> Projeto de Vida</td>
+				<td> Sociologia</td>
+				<td> Trilhas de Aprofundamento UC 2</td>
+			</tr>
+			<tr>
+				<td> 10:20</td>
+				<td> Eletivas</td>
+				<td> Matemática</td>
+				<td> Projeto de Vida</td>
+				<td> ...</td>
+				<td> MTC</td>
+			</tr>
+			<tr>
+				<td> 11:10</td>
+				<td> Eletivas</td>
+				<td> Química</td>
+				<td> Programação Web II</td>
+				<td> Programação Estruturada e Orientada a Objetos </td>
+				<td> Trilhas de Aprofundamento UC 1</td>
+			</tr>
+			<tr>
+				<td> 13:20</td>
+				<td> Educação Física</td>
+				<td> Empreededorismo</td>
+				<td> Programação Web II</td>
+				<td> Programação Estruturada e Orientada a Objetos</td>
+				<td> Trilhas de Aprofundamento UC 1</td>
+			</tr>
+			<tr>
+				<td> 14:10</td>
+				<td> Espanhol</td>
+				<td> Empreededorismo</td>
+				<td> Biologia</td>
+				<td> Programação Web II</td>
+				<td> Programação Web II</td>
+			</tr>
+			<tr>
+				<td> 15:20</td>
+				<td> Logica de Programação Algoritmos</td>
+				<td> Oficina Formativa UC 1</td>
+				<td> Programação Estruturada e Orientada a Objetos</td>
+				<td> Programação Web II</td>
+				<td> Programação Web II</td>
+			</tr>
+			<tr>
+				<td> 16:10</td>
+				<td> Logica de Programação Algoritmos</td>
+				<td> Oficina Formativa UC 1</td>
+				<td> ...</td>
+				<td> Inglês</td>
+				<td> Filosofia</td>
+			</tr>
+			
+		</table>
+		    <time></time>
+	<style> 
+	table{
+	background-color:white;
+	}
+	
+	*{
+  font-family: Arial;
+  box-sizing: content-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+}
+
+time{
+  border: 1px solid #f7f7f7;
+  padding: 4px 12px;
+  baclground-color: black;
+  color: #f7f7f7;
+  font-size: 2em;
+  font-weight: 300;
+  border-radius: 4px;
+}</style>
+  <script>
+  const showTimeNow = () =>{
+
+//Selecinando a tag de destino
+  const clockTag = document.querySelector('time');
+  
+//Instanciando a classe Date
+  let dateNow = new Date();
+
+//pegando os valores desejados
+  let hh = dateNow.getHours();
+  let mm = dateNow.getMinutes();
+  let ss = dateNow.getSeconds();
+  
+  hh = hh < 10 ? '0'+ hh : hh; 
+  mm = mm < 10 ? '0'+ mm : mm; 
+  ss = ss < 10 ? '0'+ ss : ss; 
+   
+  clockTag.innerText = hh +':'+ mm +':'+ ss;
+}
+
+//executando a funcao a cada 1 segundo
+showTimeNow()
+setInterval(showTimeNow, 1000);
+  </script>
+</body>
+</html>
